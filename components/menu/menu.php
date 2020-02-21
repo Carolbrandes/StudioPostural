@@ -16,8 +16,8 @@
                         </nav>
 
                         <nav class="redes-sociais">
-                                <a href=""><img src="images/icone-fb-white.png" alt=""></a>
-                                <a href=""><img src="images/icone-instagram-white.png" alt=""></a>
+                                <a href=""><img src="images/icone-fb.png" alt=""></a>
+                                <a href=""><img src="images/icone-instagram.png" alt=""></a>
                         </nav>
                 </div>
         </nav>

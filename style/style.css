@@ -77,10 +77,16 @@ p {
   font-family: "dmSans"; }
 .logo-index {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   background-color: rgba(255, 255, 255, 0.356);
   padding: 170px 0;
   text-align: center; }
+  @media screen and (max-width: 1100px) {
+    .logo-index {
+      height: 40vh; } }
+  @media screen and (max-width: 800px) {
+    .logo-index {
+      height: 70vh; } }
   .logo-index img {
     max-width: 700px;
     width: 40%; }
@@ -174,7 +180,7 @@ p {
   padding: 20px 2%; }
 
 .menu {
-  width: 80%;
+  width: 70%;
   /*tablet */
   /*celular*/ }
   .menu a {
@@ -221,21 +227,23 @@ p {
       .menu-responsivo__linha:last-of-type {
         margin-bottom: 0; } }
 
+.redes-sociais img {
+  width: 40px; }
+
 .banner {
-  background-image: url(../images/bg1.jpg);
+  background-image: url(../images/bg2.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-attachment: fixed;
   width: 100%;
-  height: 80vh; }
+  height: 100vh; }
   @media screen and (max-width: 1100px) {
     .banner {
       background-attachment: initial;
       height: 40vh; } }
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 800px) {
     .banner {
-      height: 70vh;
-      background-image: url(../images/bg2.jpg); } }
+      height: 70vh; } }
 
 .secao-quem-somos-index {
   margin: 0 auto; }
