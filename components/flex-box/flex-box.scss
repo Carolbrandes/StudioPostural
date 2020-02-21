@@ -18,6 +18,17 @@
         align-items: center;
 }
 
+.flex-row-between{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media screen and (max-width:500px){
+                justify-content: center;
+        }
+
+}
+
 .coluna-flex-15{
         width: 15%;
 
@@ -29,9 +40,15 @@
 
 .coluna-flex-30{
         width: 30%;
+        margin-bottom: 20px;
 
         @media screen and (max-width: 800px){
-                width: 80%;
+                width: 40%;
                 margin-bottom: 40px;  
+        }
+
+        @media screen and (max-width: 500px){
+                width: 90%;
+               
         }
 }

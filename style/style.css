@@ -16,6 +16,14 @@
   justify-content: space-between;
   align-items: center; }
 
+.flex-row-between {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  @media screen and (max-width: 500px) {
+    .flex-row-between {
+      justify-content: center; } }
+
 .coluna-flex-15 {
   width: 15%; }
   @media screen and (max-width: 800px) {
@@ -24,11 +32,15 @@
       margin-bottom: 40px; } }
 
 .coluna-flex-30 {
-  width: 30%; }
+  width: 30%;
+  margin-bottom: 20px; }
   @media screen and (max-width: 800px) {
     .coluna-flex-30 {
-      width: 80%;
+      width: 40%;
       margin-bottom: 40px; } }
+  @media screen and (max-width: 500px) {
+    .coluna-flex-30 {
+      width: 90%; } }
 
 * {
   margin: 0;
@@ -63,20 +75,31 @@ p {
 @font-face {
   src: url(../fonts/DMSans/DMSans-Regular.ttf);
   font-family: "dmSans"; }
-.logo {
+.logo-index {
   width: 100%;
   height: 80vh;
   background-color: rgba(255, 255, 255, 0.356);
-  padding: 170px 0; }
-  .logo img {
+  padding: 170px 0;
+  text-align: center; }
+  .logo-index img {
     max-width: 700px;
-    width: 40%;
-    text-align: center; }
+    width: 40%; }
+    @media screen and (max-width: 800px) {
+      .logo-index img {
+        width: 80%; } }
+
+.logo {
+  text-align: center;
+  padding: 130px 0 50px;
+  width: 100%; }
+  .logo img {
+    width: 60%;
+    max-width: 400px; }
     @media screen and (max-width: 800px) {
       .logo img {
         width: 80%; } }
 
-.botao, .botao-2 {
+.botao, .botao-2, .botao-3 {
   padding: 10px 3%;
   margin: 20px 0; }
 
@@ -84,7 +107,7 @@ p {
   padding: 10px 3%;
   margin: 10px 0; }
 
-.botao, .botao-2 {
+.botao, .botao-2, .botao-3 {
   display: block;
   min-width: fit-content;
   height: 40px;
@@ -207,10 +230,12 @@ p {
   height: 80vh; }
   @media screen and (max-width: 1100px) {
     .banner {
-      background-attachment: initial; } }
+      background-attachment: initial;
+      height: 40vh; } }
   @media screen and (max-width: 780px) {
     .banner {
-      height: 60vh; } }
+      height: 70vh;
+      background-image: url(../images/bg2.jpg); } }
 
 .secao-quem-somos-index {
   margin: 0 auto; }
@@ -237,6 +262,7 @@ p {
 
 .chamada-ultimos-artigos .coluna-artigo img {
   width: 100%;
+  height: 150px;
   max-width: 200px;
   -webkit-box-shadow: 1px 1px 2px 2px #3a3a3a;
   -moz-box-shadow: 1px 1px 2px 2px #3a3a3a;
@@ -245,6 +271,50 @@ p {
   -moz-border-radius: 5px;
   border-radius: 5px;
   display: block; }
+
+.filtros {
+  width: 25%; }
+  .filtros a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px 5%;
+    background-color: #e06a1c;
+    border: 1px solid rgba(204, 204, 204, 0.555);
+    transition: background-color 1s linear;
+    cursor: pointer; }
+    .filtros a:hover {
+      background-color: rgba(47, 94, 100, 0.911); }
+    @media screen and (max-width: 500px) {
+      .filtros a {
+        display: inline-block;
+        background-color: #ffffff;
+        border: none;
+        color: #e06a1c;
+        padding: 0 1%;
+        font-size: 14px;
+        text-align: center; } }
+  @media screen and (max-width: 500px) {
+    .filtros {
+      width: 100%;
+      margin-bottom: 30px; } }
+
+.conteudo {
+  width: 70%;
+  padding: 0 3% 40px; }
+  .conteudo .indicador-categoria {
+    width: fit-content;
+    color: #494949e5;
+    font-size: 18px;
+    padding: 2px;
+    border-bottom: 1px solid #494949e5;
+    margin-bottom: 15px; }
+  .conteudo .borda-colunas {
+    border: 1px solid rgba(204, 204, 204, 0.555);
+    padding: 4%; }
+  .conteudo img {
+    width: 100%;
+    max-width: 200px; }
 
 .footer-principal {
   background-color: #ef8518; }

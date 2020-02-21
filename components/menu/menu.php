@@ -8,9 +8,9 @@
                         </nav>
 
                         <nav class="menu">
-                                <a href="">Início</a>
+                                <a href="index.php">Início</a>
                                 <a href="">Quem Somos</a>
-                                <a href="">Serviços</a>
+                                <a href="servicos.php">Serviços</a>
                                 <a href="">Blog</a>
                                 <a href="">Contato</a>
                         </nav>

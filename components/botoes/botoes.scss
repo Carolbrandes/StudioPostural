@@ -51,6 +51,7 @@
 
 .botao-3{
         width: 30%;
+        @extend %botao; 
         @extend %espacamentoBotoes2; 
 
         &:hover{

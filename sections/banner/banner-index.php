@@ -1,6 +1,6 @@
 <header>
         <div class="banner">
-                <div class="logo flex-col-center">
+                <div class="logo-index flex-col-center">
                         <img src="images\logo.png" alt="">
                 </div>
 
