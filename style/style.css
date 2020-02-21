@@ -207,8 +207,10 @@ p {
   height: 80vh; }
   @media screen and (max-width: 1100px) {
     .banner {
-      background-attachment: initial;
-      height: 50vh; } }
+      background-attachment: initial; } }
+  @media screen and (max-width: 780px) {
+    .banner {
+      height: 60vh; } }
 
 .secao-quem-somos-index {
   margin: 0 auto; }
