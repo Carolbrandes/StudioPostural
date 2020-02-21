@@ -1,0 +1,60 @@
+%espacamentoBotoes{
+        padding: 10px 3%;
+        margin: 20px 0;
+}
+
+%espacamentoBotoes2{
+        padding: 10px 3%;
+        margin: 10px 0;
+}
+
+%botao{
+        display: block;
+        min-width: fit-content;
+        height: 40px;
+        text-align: center;
+        text-decoration: none;
+        background-image: linear-gradient( rgba(78, 131, 138, 0.911),rgba(47, 94, 100, 0.911));
+        color: #fff;
+        transition: background-image 1s ease-in-out;
+       @include border-radius;
+        @extend %espacamentoBotoes;
+}
+
+%hoverBotao{
+        background-image: linear-gradient( #ec7514e8,#f79d44e8);
+        color: #292929;
+}
+
+%hoverBotaoClaro{
+        background-image: linear-gradient( #ecc2a0e8,#fac590e8);
+        color: #292929;
+}
+
+.botao{
+        width: 30%;
+        @extend %botao; 
+        
+        &:hover{
+                @extend %hoverBotao;
+        }
+}
+
+.botao-2{
+        width: 50%;
+        @extend %botao; 
+        
+        &:hover{
+                @extend %hoverBotaoClaro;
+        }
+}
+
+.botao-3{
+        width: 30%;
+        @extend %espacamentoBotoes2; 
+
+        &:hover{
+                @extend %hoverBotao;
+        }
+}
+

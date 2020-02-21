@@ -1,0 +1,17 @@
+.chamada-ultimos-artigos{
+        @extend %espacamentoSecoes;
+
+
+        .coluna-artigo{
+
+                img{
+                        width: 100%;
+                        max-width: 200px;
+                        @extend %espacamentoImagens;
+                        @include box-shadow;
+                        @include border-radius;
+                        display: block;
+                        
+                }
+        }
+}

@@ -1,0 +1,43 @@
+%espacamentoTitulos{
+        margin-bottom: 40px;
+}
+
+%espacamentoSubtitulos{
+        margin-bottom: 10px;
+}
+
+%titulos{
+        text-align: center;
+        @extend %espacamentoTitulos;
+}
+
+.titulo-primario{
+        font-size: 35px;
+        color: #d1540c;
+        @extend %titulos;
+}
+
+.titulo-secundario{
+        @extend %titulos;
+         font-size: 25px;
+         color: #f57118;
+ }
+
+ .titulo-secundario--escuro{
+        @extend %titulos;
+         font-size: 25px;
+         color: #8b3c07;
+ }
+
+
+.subtitulo-terciario{
+        @extend %espacamentoSubtitulos;
+         font-size: 20px;
+         color: #e07a35;
+ }
+
+.subtitulo-terciario--claro{
+       @extend %espacamentoSubtitulos;
+        font-size: 20px;
+        color: #dddddd;
+}

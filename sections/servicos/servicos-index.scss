@@ -1,0 +1,18 @@
+.secao-servicos{
+        @extend %espacamentoSecoes;
+        background-image: linear-gradient( #fdb173e8,#fad5b0e8);
+        
+        .coluna-servico{  
+                 background-image: linear-gradient(#e06a1c, #eb520b);
+                 border: 1px solid #fff;
+                 @include border-radius;
+ 
+ 
+                img{
+                        width: 30%;
+                        max-width: 40px;
+                        @extend %espacamentoIcones;
+                }
+        }
+ 
+ }

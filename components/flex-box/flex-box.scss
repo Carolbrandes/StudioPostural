@@ -1,0 +1,37 @@
+.flex-col-center{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.flex-row-around{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+}
+
+.flex-row-between-center{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.coluna-flex-15{
+        width: 15%;
+
+        @media screen and (max-width: 800px){
+                width: 60%;
+                margin-bottom: 40px;  
+        }
+}
+
+.coluna-flex-30{
+        width: 30%;
+
+        @media screen and (max-width: 800px){
+                width: 80%;
+                margin-bottom: 40px;  
+        }
+}

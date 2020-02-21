@@ -1,0 +1,9 @@
+.footer-principal{
+        background-color: #ef8518;
+        @extend %espacamentoSecoes;
+
+        p{
+                text-align: center;
+                color: #fff;
+        }
+}

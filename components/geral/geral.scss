@@ -1,0 +1,35 @@
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "dmSans";
+}
+
+body{
+        overflow-x: hidden;
+}
+
+%espacamentoSecoes{
+        padding: 40px 0;
+}
+
+%espacamentoIcones{
+        margin: 10px 0;
+}
+
+%espacamentoImagens{
+        margin: 15px 0;
+}
+
+.contexto{
+        width: 90%;
+        margin: 0 auto;
+}
+
+p{
+        line-height: 25px;
+        text-align: justify;
+        color: #2b0e01;
+}
+
+
