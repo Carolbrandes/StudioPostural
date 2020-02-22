@@ -16,7 +16,7 @@
                 </nav>
 
                 <nav>
-                        <a href="">Sair</a>
+                        <a class="sair" href="">Sair</a>
                 </nav>
         </div>
 </nav>
