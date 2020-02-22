@@ -17,16 +17,27 @@
                 <div class="contexto">
                         <form action="" method="post">
 
+                                <h2 class="titulo-secundario--escuro">Cadastrar Serviço</h2>
                                 <div>
-                                        <input type="text" name="titulo-servico" autofocus placeholder="Titulo">
+                                        <input class="input-text" type="text" name="titulo-servico" autofocus placeholder="Titulo">
                                 </div>
 
-                                <div>
-                                        <input type="radio" name="categoria-servico" id="">Terapias
-                                        <input type="radio" name="categoria-servico" id="">Massagens
-                                        <input type="radio" name="categoria-servico" id="">Estética
-                                        <input type="radio" name="categoria-servico" id="">Nutrição
-                                        <input type="radio" name="categoria-servico" id="">Pilates
+                                <div class="coluna-radio">
+                                        <div>
+                                                <input type="radio" name="categoria-servico" id="">Terapias
+                                        </div>
+                                        <div>
+                                                <input type="radio" name="categoria-servico" id="">Massagens
+                                        </div>
+                                        <div>
+                                                <input type="radio" name="categoria-servico" id="">Estética
+                                        </div>
+                                        <div>
+                                                <input type="radio" name="categoria-servico" id="">Nutrição
+                                        </div>
+                                        <div>
+                                                <input type="radio" name="categoria-servico" id="">Pilates
+                                        </div>
                                 </div>
 
                                 <div>
@@ -37,6 +48,8 @@
                                         <label class="input-file" for="imagem">Escolher Imagem</label>
                                         <input type="file" name="imagem-servico" id="imagem" style="display: none;">
                                 </div>
+
+                                <button class="botao-form" type="submit">Enviar</button>
 
                         </form>
                 </div>

@@ -1,0 +1,86 @@
+%espacamentoCampos{
+        margin-bottom: 15px;
+}
+
+%inputText{
+        height: 30px;
+        line-height: 30px;
+        padding: 2%;
+}
+
+
+form:first-of-type{
+        padding: 110px 0;
+}
+
+form{
+        margin: 0 auto;
+        text-align: center;
+        width: 80%;
+        border-left: 1px solid rgba(141, 141, 141, 0.562);
+        border-right: 1px solid rgba(141, 141, 141, 0.562);
+}
+
+.input-text{
+        width: 60%;
+        @extend %inputText;
+        @extend %espacamentoCampos;
+}
+
+
+input[type="radio"]{
+        @extend %espacamentoCampos;
+}
+
+
+textarea{
+        width: 60%;
+        height: 300px;
+        resize: none;
+        padding: 2%;
+        @extend %espacamentoCampos;
+}
+
+.input-file{
+        display: block;
+        background-image: linear-gradient( #fdb173e8,#fad5b0e8);
+        padding: 10px 5%;
+        width: fit-content; 
+        @extend %espacamentoCampos;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+}
+
+.coluna-radio{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px auto;
+
+        div{
+                margin-right: 2%;
+
+                &:last-of-type{
+                        margin-right: 0;
+                }
+
+                @media screen and (max-width: 500px) {
+                       margin: 5px 0;
+                        
+                }
+
+                
+        }
+
+
+
+
+        @media screen and (max-width: 500px) {
+                flex-direction: column;
+                
+        }
+}
+
+
+
