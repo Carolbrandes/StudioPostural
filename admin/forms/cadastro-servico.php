@@ -1,3 +1,28 @@
+<?php
+
+use classes\CategoriaServico;
+use classes\Db;
+use classes\Servicos;
+
+include '../autoload.php';
+
+$pdo = Db::conectar();
+$categorias = CategoriaServico::todasCategorias($pdo);
+$servico = new Servicos();
+
+if (isset($_POST['acao'])) {
+
+        $cadastroServico = $servico->cadastrar($pdo, $_POST['nome_servico'], $_POST['descricao_servico'], $_POST['id_categoria'], $_FILES['foto_servico']);
+
+?>
+
+        <script>
+                alert("<?php echo $cadastroServico; ?>")
+                location.href = "cadastro-servico.php"
+        </script>
+
+<?php }?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,41 +40,34 @@
         <main>
                 <?php include '../../components/menu/menu-admin.php'; ?>
                 <div class="contexto">
-                        <form action="" method="post">
+                        <form action="" method="post" enctype="multipart/form-data">
 
                                 <h2 class="titulo-secundario--escuro">Cadastrar Serviço</h2>
                                 <div>
-                                        <input class="input-text" type="text" name="titulo-servico" autofocus placeholder="Titulo">
+                                        <input class="input-text" type="text" name="nome_servico" autofocus placeholder="Titulo" required>
                                 </div>
 
                                 <div class="coluna-radio">
-                                        <div>
-                                                <input type="radio" name="categoria-servico" id="">Terapias
-                                        </div>
-                                        <div>
-                                                <input type="radio" name="categoria-servico" id="">Massagens
-                                        </div>
-                                        <div>
-                                                <input type="radio" name="categoria-servico" id="">Estética
-                                        </div>
-                                        <div>
-                                                <input type="radio" name="categoria-servico" id="">Nutrição
-                                        </div>
-                                        <div>
-                                                <input type="radio" name="categoria-servico" id="">Pilates
-                                        </div>
+                                        <?php foreach ($categorias as $categoria) { ?>
+                                                <div>
+                                                        <input required type="radio" name="id_categoria" value="<?php echo $categoria['id_categoria']; ?>"><?php echo $categoria['nome_categoria']; ?>
+                                                </div>
+                                        <?php } ?>
                                 </div>
 
+
                                 <div>
-                                        <textarea name="descricao-servico" id="" cols="30" rows="10" placeholder="Descrição"></textarea>
+                                        <textarea required name="descricao_servico" cols="30" rows="10" placeholder="Descrição"></textarea>
                                 </div>
 
                                 <div>
                                         <label class="input-file" for="imagem">Escolher Imagem</label>
-                                        <input type="file" name="imagem-servico" id="imagem" style="display: none;">
+                                        <input required type="file" name="foto_servico" id="imagem" style="display: none;">
                                 </div>
 
-                                <button class="botao-form" type="submit">Enviar</button>
+                                <button name="acao" class="botao-form" type="submit">Cadastrar</button>
+
+
 
                         </form>
                 </div>
