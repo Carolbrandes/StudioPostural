@@ -2,6 +2,8 @@
 
 namespace classes;
 
+use PDO;
+
 class Servicos
 {
 
@@ -16,6 +18,22 @@ class Servicos
                         } else {
                                 return "Serviço NÃO cadastrado!";
                         }
+                }
+        }
+
+        public static function todosServicos($pdo){
+                $sql = $pdo->prepare("SELECT * FROM `servico`");
+
+                if($sql->execute()){
+                        return $sql->fetchAll(PDO::FETCH_ASSOC);
+                }
+        }
+
+        public static function servicoPorCategoria($pdo, $idCategoria){
+                $sql = $pdo->prepare("SELECT * FROM `servico` INNER JOIN `categoria_servico`ON  `servico`.id_categoria =`categoria_servico`.id_categoria WHERE `servico`.id_categoria  = $idCategoria");
+
+                if($sql->execute()){
+                        return $sql->fetchAll(PDO::FETCH_ASSOC);
                 }
         }
 

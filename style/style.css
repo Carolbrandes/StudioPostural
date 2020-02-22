@@ -69,6 +69,12 @@ p {
   text-align: justify;
   color: #2b0e01; }
 
+.uppercase {
+  text-transform: uppercase; }
+
+.centerText {
+  text-align: center; }
+
 @font-face {
   src: url(../fonts/Muli/static/Muli-Regular.ttf);
   font-family: "muli"; }
@@ -342,7 +348,8 @@ p {
     padding: 4%; }
   .conteudo img {
     width: 100%;
-    max-width: 200px; }
+    max-width: 150px;
+    height: 100px; }
 
 .footer-principal {
   background-color: #ef8518; }
