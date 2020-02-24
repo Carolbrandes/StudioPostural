@@ -307,7 +307,8 @@ p {
   display: block; }
 
 .filtros {
-  width: 25%; }
+  width: 25%;
+  margin-bottom: 60px; }
   .filtros a {
     display: block;
     text-decoration: none;

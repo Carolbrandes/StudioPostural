@@ -5,10 +5,10 @@ use classes\Db;
 use classes\Servicos;
 
 include 'admin/autoload.php';
-
+$id = $_GET['id_categoria'];
 $pdo = Db::conectar();
 $categorias = CategoriaServico::todasCategorias($pdo);
-$todosServicos = Servicos::todosServicos($pdo);
+$todosServicos = Servicos::servicoPorCategoria($pdo, $id);
 
 ?>
 
@@ -39,7 +39,13 @@ $todosServicos = Servicos::todosServicos($pdo);
                                 </nav>
 
                                 <section class="conteudo">
-                                        <p class="indicador-categoria">Todos</p>
+                                        <p class="indicador-categoria">
+                                                <?php
+                                                foreach ($todosServicos as $key => $value) {
+                                                        echo $value['nome_categoria'];
+                                                }
+                                                ?>
+                                        </p>
                                         <div class="flex-row-around borda-colunas">
 
                                                 <?php foreach ($todosServicos as  $servico) { ?>
@@ -61,7 +67,7 @@ $todosServicos = Servicos::todosServicos($pdo);
 
         <script src="js/menu-responsivo.js"></script>
 
-     
+
 
 </body>
 
