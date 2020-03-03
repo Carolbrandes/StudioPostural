@@ -394,20 +394,20 @@ textarea {
   margin-right: auto;
   cursor: pointer; }
 
-.coluna-radio {
+.coluna-radio, .coluna-checkbox {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 5px auto; }
-  .coluna-radio div {
+  .coluna-radio div, .coluna-checkbox div {
     margin-right: 2%; }
-    .coluna-radio div:last-of-type {
+    .coluna-radio div:last-of-type, .coluna-checkbox div:last-of-type {
       margin-right: 0; }
     @media screen and (max-width: 500px) {
-      .coluna-radio div {
+      .coluna-radio div, .coluna-checkbox div {
         margin: 5px 0; } }
   @media screen and (max-width: 500px) {
-    .coluna-radio {
+    .coluna-radio, .coluna-checkbox {
       flex-direction: column; } }
 
 /*# sourceMappingURL=style.css.map */

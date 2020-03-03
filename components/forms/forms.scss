@@ -52,7 +52,7 @@ textarea{
         cursor: pointer;
 }
 
-.coluna-radio{
+.coluna-radio, .coluna-checkbox{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -69,12 +69,8 @@ textarea{
                        margin: 5px 0;
                         
                 }
-
                 
         }
-
-
-
 
         @media screen and (max-width: 500px) {
                 flex-direction: column;
