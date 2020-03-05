@@ -13,7 +13,12 @@ $Artigo = new Artigo();
 
 if (isset($_POST['acao'])) {
 
-        $cadastroArtigo = $artigo->cadastrar($pdo, $_POST['titulo_artigo'], $_POST['descricao_artigo'], $_POST['id_categoria_blog'], $_FILES['imagem_artigo']);
+       $titulo = $_POST["titulo_artigo"];
+       $descricao = $_POST["descricao_artigo"];
+       $categorias = $_POST["id_categoria_blog"];
+       $imagem = $_FILES["imagem_artigo"];
+
+       $cadastroArtigo = $Artigo->cadastrar($pdo, $titulo, $descricao, $categorias, $imagem);
 
 ?>
 
