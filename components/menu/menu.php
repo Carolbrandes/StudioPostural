@@ -11,7 +11,7 @@
                                 <a href="index.php">Início</a>
                                 <a href="">Quem Somos</a>
                                 <a href="servicos.php">Serviços</a>
-                                <a href="">Blog</a>
+                                <a href="blog.php">Blog</a>
                                 <a href="">Contato</a>
                         </nav>
 

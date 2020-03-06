@@ -1,14 +1,15 @@
 <?php
 
-use classes\CategoriaServico;
+use classes\Artigo;
+use classes\CategoriaBlog;
 use classes\Db;
-use classes\Servicos;
+
 
 include 'admin/autoload.php';
 
 $pdo = Db::conectar();
-$categorias = CategoriaServico::todasCategorias($pdo);
-$todosServicos = Servicos::todosServicos($pdo);
+$categorias = CategoriaBlog::todasCategorias($pdo);
+$todosArtigos = Artigo::todosArtigos($pdo);
 
 ?>
 
@@ -34,23 +35,36 @@ $todosServicos = Servicos::todosServicos($pdo);
                                 <nav class="filtros">
                                         <a href="servicos.php">Todos</a>
                                         <?php foreach ($categorias as $categoria) { ?>
-                                                <a href="servicoCategoria.php?id_categoria=<?php echo $categoria['id_categoria']; ?>"><?php echo $categoria['nome_categoria']; ?></a>
+                                                <a href="servicoCategoria.php?id_categoria=<?php echo $categoria['id_categoria_blog']; ?>"><?php echo $categoria['nome_categoria_blog']; ?></a>
                                         <?php } ?>
                                 </nav>
 
                                 <section class="conteudo">
                                         <p class="indicador-categoria">Todos</p>
-                                        <div class="flex-row-around borda-colunas">
+                                      
 
-                                                <?php foreach ($todosServicos as  $servico) { ?>
+                                                <?php foreach ($todosArtigos as  $artigo) { ?>
 
-                                                        <div class="coluna-flex-30 flex-col-center"">
-                                                <h3 class=" subtitulo-terciario uppercase centerText"><?php echo $servico['nome_servico']; ?></h3>
-                                                                <img src="imagens-cadastro/<?php echo $servico['foto_servico']; ?>" alt="<?php echo $servico['nome_servico']; ?>">
-                                                                <a class="botao-3" href="servico.php?<?php echo $servico['id_servico']; ?>">Saiba Mais!</a>
-                                                        </div>
+                                                      <article class="artigo flex-row-between">
+                                                              <div class="artigo-img">
+                                                                      <img src="imagens-cadastro/<?php echo $artigo['imagem_artigo']; ?>" alt="<?php echo $artigo['titulo_artigo']; ?>">
+                                                              </div>
+
+                                                              <div class="artigo-dados">
+                                                                      <h1 class= "subtitulo-terciario uppercase centerText">
+                                                                              <?php echo $artigo['titulo_artigo'];?>
+                                                                      </h1>
+
+                                                                      <p class="artigo-data"><?php echo Artigo::formatarData($artigo['data']);?></p>
+
+                                                                      <p class="artigo-descricao"><?php echo $artigo['descricao_artigo']; ?></p>
+
+                                                                      <a class="botao-3" href="servico.php?<?php echo $artigo['id_artigo']; ?>">Saiba Mais!</a>
+
+                                                              </div>
+                                                      </article>
+                                                     
                                                 <?php } ?>
-                                        </div>
                                 </section>
                         </div>
                 </div>

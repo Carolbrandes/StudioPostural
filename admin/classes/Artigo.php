@@ -33,9 +33,9 @@ class Artigo
                 }
         }
 
-        public static function todosServicos($pdo)
+        public static function todosArtigos($pdo)
         {
-                $sql = $pdo->prepare("SELECT * FROM `servico`");
+                $sql = $pdo->prepare("SELECT * FROM `artigo`");
 
                 if ($sql->execute()) {
                         return $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -85,5 +85,9 @@ class Artigo
                         $nomefoto = date("YmdHis") . rand(1000, 9999) . "." . $ext;
                         return $nomefoto;
                 }
+        }
+
+        public static function formatarData($data){
+                return date("d/m/Y", strtotime($data));
         }
 }
